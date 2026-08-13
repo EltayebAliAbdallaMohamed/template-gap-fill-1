@@ -18,7 +18,7 @@ yearEl.textContent = new Date().getFullYear();
 
 async function loadData(){
   try{
-    const res = await fetch('./data.json', {cache: "no-store"});
+    const res = await fetch('./data2.json', {cache: "no-store"});
     if(!res.ok) throw new Error('Failed to fetch data.json');
     const data = await res.json();
     questions = data.questions || [];
@@ -84,6 +84,7 @@ function checkAnswer(){
     feedbackEl.style.color = 'var(--danger)';
   }
 }
+
 
 function showAnswer(){
   const correct = questions[index].answer;
