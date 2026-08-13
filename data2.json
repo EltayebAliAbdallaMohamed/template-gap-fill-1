@@ -1,0 +1,15 @@
+
+{
+ 
+ 
+  "options": ["download", "campus", "foreign", "online", "professor", "skill", "special"],
+  "questions": [
+    { "stem": "Mary can't go ___ in her room. She goes to a cafe to check her email.", "answer": "online" },
+    { "stem": "Writing is an important ___. Mary writes every day. She wants to be a good writer.", "answer": "skill" },
+    { "stem": "Ali can't  ___ attachments that come with emails becasuse he can't go online.", "answer": "download" },
+    { "stem": "Mary and Tom have a great math ___. The classes are very interesting", "answer": "professor" },
+    { "stem": "My university has a big ___ . It has more than 100 buildings.", "answer": "campus" },
+    { "stem": "David is from France. For David, Korean is a ___ language.", "answer": "foreign" }
+  ]
+}
+
