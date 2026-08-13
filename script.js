@@ -85,7 +85,6 @@ function checkAnswer(){
   }
 }
 
-
 function showAnswer(){
   const correct = questions[index].answer;
   feedbackEl.textContent = `Answer: ${correct}`;
