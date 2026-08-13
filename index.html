@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Body Parts Exercise</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" id="app">
+    <header>
+      <h1>Body Parts — Fill the gap</h1>
+      <p class="instructions">Choose the correct word to complete the sentence.</p>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <div class="top-row">
+        <div id="progress" class="progress">1 of 6</div>
+        <div id="counter" class="sr-only" aria-hidden="true"></div>
+      </div>
+
+      <p id="stem" class="stem">Loading…</p>
+
+      <form id="answer-form" autocomplete="off">
+        <label for="choices" class="label">Your answer</label>
+        <select id="choices" name="choices" aria-describedby="feedback">
+          <option value="">Select an answer</option>
+        </select>
+
+        <div class="controls">
+          <button type="button" id="check" class="btn primary" disabled>Check</button>
+          <button type="button" id="show" class="btn">Show answer</button>
+        </div>
+      </form>
+
+      <div id="feedback" class="feedback" role="status" aria-live="assertive"></div>
+
+      <nav class="nav">
+        <button id="prev" class="nav-btn" aria-label="Previous question" disabled>◀ Prev</button>
+        <button id="next" class="nav-btn" aria-label="Next question" disabled>Next ▶</button>
+      </nav>
+
+      <div class="notes">
+        <button id="shuffle" class="link-btn">Shuffle options</button>
+      </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+      <div class="footer-inner">
+        <small>Tip: use ← and → to navigate, Enter to check.</small>
+        <div class="footer-meta">
+          <span>© <span id="year"></span> Created by: Eltayeb Mohamed - King Saud University</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

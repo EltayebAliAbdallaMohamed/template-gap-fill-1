@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 10%;
+        }
+        select{
+            text-align: center;
+            padding: 5px;
+            font-size: large;
+            display: flex;
+        }
+        p{
+            font-size: large;
+            font-weight: 500;
+        }
+        #stem, #ans{
+            font-size: large;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="q" ></p>
+        <p>Answer the questions.</p>
+        <p id="stem" ></p>
+
+    </div>
+    <div>
+        <select>
+
+            <option value="hand"></option>
+            
+            <option value="foot">foot</option>
+            <option value="ankle">ankle</option>
+            <option value="hand">hand</option>
+            <option value="knee">knee</option>
+            <option value="toe">toe</option>
+            <option value="shoulder">shoulder</option>
+        </select>
+    </div>
+    <div>
+        <details id="answer-details" >
+            <summary>Answer</summary>
+            <p  id="ans" ></p>
+        </details>
+    </div>
+    <div>
+        <button id="next" >&#9654;</button>
+        <button id="prev" >&#9664;</button>
+    </div>
+    <script>
+
+
+let index=0;
+        const questions=[
+            {
+                stem:"I twisted my ___ while I was running.",
+                answer:"ankle",
+            },
+            {
+                stem:"The leg bends at the ___.",
+                answer:"knee",
+            },
+            {
+                stem:"Breaking even your smallest ___ can make walking difficult.",
+                answer:"toe",
+            },
+            {
+                stem:"This shoes barely fits on my ___.",
+                answer:"foot",
+            },
+            {
+                stem:"Give me your ___ and I will help you up.",
+                answer:"hand",
+            },
+            {
+                stem:"Tom can't move his arm due to his ___ injury.",
+                answer:"shoulder",
+            },
+        ]
+
+        function displayData(){
+            document.getElementById("q").textContent=`${index + 1} of ${questions.length}`
+            document.getElementById("stem").textContent=questions[index].stem;
+            document.getElementById("ans").textContent=questions[index].answer;
+            document.getElementById("next").disabled=(index===questions.length-1);
+            document.getElementById("prev").disabled=(index===0);
+
+        }
+        document.getElementById("next").addEventListener('click', ()=>{
+            if(index < questions.length-1){
+                index++;
+                displayData();
+                document.getElementById("answer-details").open=false;
+
+            }
+        })
+        document.getElementById("prev").addEventListener('click', ()=>{
+            if(index >0){
+                index--;
+                displayData();
+                document.getElementById("answer-details").open=false;
+
+
+            }
+        })
+
+        displayData();
+    </script>
+
+
+</body>
+</html>

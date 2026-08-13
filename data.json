@@ -1,0 +1,11 @@
+{
+  "options": ["foot", "ankle", "hand", "knee", "toe", "shoulder"],
+  "questions": [
+    { "stem": "I twisted my ___ while I was running.", "answer": "ankle" },
+    { "stem": "The leg bends at the ___.", "answer": "knee" },
+    { "stem": "Breaking even your smallest ___ can make walking difficult.", "answer": "toe" },
+    { "stem": "This shoe barely fits on my ___.", "answer": "foot" },
+    { "stem": "Give me your ___ and I will help you up.", "answer": "hand" },
+    { "stem": "Tom can't move his arm due to his ___ injury.", "answer": "shoulder" }
+  ]
+}
